@@ -1,0 +1,21 @@
+:root {
+    --text: rgb(238, 236, 236);
+    --lg: 18px;
+    --md: 16px;
+    --sm: 14px
+    --background: #16394c
+}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    font: 62.5%;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #16394c;
+    color: var(--text);
+}

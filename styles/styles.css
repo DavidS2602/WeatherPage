@@ -31,10 +31,10 @@ body {
     justify-content: center;
     width: 100vw;
     text-align: center;
-    grid-template-rows: 200px;
+    grid-template-rows: 400px;
     padding-bottom: 60px;
 }
-#status-weather .weather-logo {
+#status-weather .weather-logo h2 {
     display: grid;
     align-items: end;
 }

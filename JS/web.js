@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
     let descriptionWeather = document.querySelector('.descriptionWeather')
     let temperature = document.querySelector('.temperature')
     let windData = document.querySelector('.wind')
-    let PrecipData = document.querySelector('.Precip')
+    let HumidityData = document.querySelector('.Humidity')
     let UVData = document.querySelector('.UV')
 
     //Footer(CSS to check)
@@ -30,20 +30,23 @@ window.addEventListener('load', () => {
                     countryTitle.textContent = cityName
                     console.log(data)
 
-                    /*
                     const Clouds = data.data[0].clouds
-                    if (Clouds <= 20) {
-                        statusLogo.src = '../static/day.svg'
-                    } else if (Clouds <=50) {
+                    const humidity = data.data[0].rh
+                    if (Clouds <= 20 && humidity <= 20) {
+                        statusLogo.src = '../animated/day.svg'
+                    } else if (Clouds <=50 && humidity <= 50) {
                         statusLogo.src = '../animated/cloudy-day-3.svg'
+                    } else if (Clouds <=70 && humidity <= 70) {
+                        statusLogo.src = '../animated/rainy-3.svg'
+                    } else if (Clouds <=90 && humidity <=90) {
+                        statusLogo.src = '../animated/rainy-4.svg'
                     } else {
-                        statusLogo.src = '../animated/cloudy.svg'
+                        statusLogo.src = '../animated/rainy-7.svg'
                     }
-                    */
+
 
                     //Description-weather
                     const desc = data.data[0].weather.description
-                    console.log(desc)
                     descriptionWeather.textContent = desc
 
                     const temp = Math.round(data.data[0].temp)
@@ -53,8 +56,8 @@ window.addEventListener('load', () => {
                     const wind = data.data[0].wind_spd
                     windData.textContent = `Velocidad del viento: ${wind}m/s`
 
-                    const Precip = data.data[0].precip
-                    PrecipData.textContent = `Precipitación: ${Precip}mm`
+                    const Humidity = Math.round(data.data[0].rh)
+                    HumidityData.textContent = `Humedad: ${Humidity}%`
 
                     const UV = data.data[0].uv
                     if (UV <= 20) {

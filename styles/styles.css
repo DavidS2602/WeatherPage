@@ -33,6 +33,12 @@ body {
     text-align: center;
     grid-template-rows: 400px;
     padding-bottom: 60px;
+    align-items: center;
+}
+#status-weather img {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
 }
 #status-weather .weather-logo h2 {
     display: grid;
@@ -44,7 +50,9 @@ body {
 }
 #status-weather .weather-data {
     display: grid;
+    grid-template-rows: 50px 50px 50px;
     align-items: center;
+    justify-items: center;
 }
 
 #Future-temperature-section {

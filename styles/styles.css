@@ -54,18 +54,3 @@ body {
     align-items: center;
     justify-items: center;
 }
-
-#Future-temperature-section {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-}
-#Future-temperature-section .temperature-day {
-    display: grid;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}

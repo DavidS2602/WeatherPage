@@ -31,7 +31,7 @@ body {
     justify-content: center;
     width: 100vw;
     text-align: center;
-    grid-template-rows: 400px;
+    grid-template-rows: 300px;
     padding-bottom: 60px;
     align-items: center;
 }
@@ -53,4 +53,27 @@ body {
     grid-template-rows: 50px 50px 50px;
     align-items: center;
     justify-items: center;
+}
+#Future-temperature-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 50px 150px 50px;
+}
+.temperature-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 205px;
+    grid-template-rows: 50px 150px 50px;
+}
+.day {
+    text-align: center;
+    align-self: center;
+}
+
+.temperature-day {
+    text-align: center;
+    align-self: center;
 }

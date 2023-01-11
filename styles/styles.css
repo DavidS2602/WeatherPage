@@ -73,7 +73,8 @@ body {
     align-self: center;
 }
 
-.temperature-day {
+.temp-max,
+.temp-min {
     text-align: center;
     align-self: center;
 }

@@ -67,10 +67,20 @@ body {
     grid-template-rows: 1fr 1fr;
     margin-top: 205px;
     grid-template-rows: 50px 150px 50px;
+    align-items: center;
+    justify-items: center;
 }
-.day {
+.day,
+img,
+.temp-max,
+.temp-min {
     text-align: center;
     align-self: center;
+}
+#Future-temperature-section img {
+    width: 150px;
+    height: 150px;
+    align-items: center;
 }
 
 .temp-max,

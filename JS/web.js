@@ -48,7 +48,7 @@ window.addEventListener('load', () => {
         navigator.geolocation.getCurrentPosition(position => {
             lon = position.coords.longitude
             lat = position.coords.latitude
-            const api_key = API_KEY
+            const api_key = 'API_KEY'
             const baseURL = 'https://api.weatherbit.io/v2.0/'
             const days = 7
 

@@ -49,7 +49,7 @@ window.addEventListener('load', () => {
             lon = position.coords.longitude
             lat = position.coords.latitude
             const api_key = 'API_KEY'
-            const baseURL = 'https://api.weatherbit.io/v2.0/'
+            const baseURL = 'https://api.weatherbit.io/v2.0/current'
             const days = 7
 
             const axiosInstance1 = axios.create({
@@ -63,46 +63,7 @@ window.addEventListener('load', () => {
                 }
             }).then(Response => {
                 const data = Response.data
-                    const cityName = data.data[0].city_name
-                    countryTitle.textContent = cityName
                     console.log(data)
-
-                    const Clouds = data.data[0].clouds
-                    if (Clouds <= 20) {
-                        statusLogo.src = '../animated/day.svg'
-                    } else if (Clouds <=50) {
-                        statusLogo.src = '../animated/cloudy-day-3.svg'
-                    } else if (Clouds <=70) {
-                        statusLogo.src = '../animated/rainy-3.svg'
-                    } else if (Clouds <=90) {
-                        statusLogo.src = '../animated/rainy-4.svg'
-                    } else {
-                        statusLogo.src = '../animated/rainy-7.svg'
-                    }
-
-
-                    //Description-weather
-                    const desc = data.data[0].weather.description
-                    descriptionWeather.textContent = desc
-
-                    const temp = Math.round(data.data[0].temp)
-                    temperature.textContent = `${temp}°C`
-
-                    //Generals-data
-                    const wind = data.data[0].wind_spd
-                    windData.textContent = `Velocidad del viento: ${wind}m/s`
-
-                    const Humidity = Math.round(data.data[0].rh)
-                    HumidityData.textContent = `Humedad: ${Humidity}%`
-
-                    const UV = data.data[0].uv
-                    if (UV <= 20) {
-                        UVData.textContent = 'Índice UV: Bajo'
-                    } else if (UV <= 50) {
-                        UVData.textContent = 'Índice UV: Moderado'
-                    } else if (UV <= 80) {
-                        UVData.textContent = 'Índice UV: Alto'
-                    }
             })
 
             /*--------------------Second Request--------------------*/
